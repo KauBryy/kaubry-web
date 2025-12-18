@@ -236,8 +236,8 @@ const App = () => {
             <motion.div
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: 50 }}
-              viewport={{ once: true }}
-              className="md:col-span-8 group interactive relative min-h-[550px] md:h-[650px] overflow-hidden rounded-[2.5rem] bg-[#0a0a0a] border border-white/5 flex flex-col"
+              viewport={{ once: true, margin: "200px" }}
+              className="md:col-span-8 group interactive relative min-h-[550px] md:h-[650px] overflow-hidden rounded-[2.5rem] bg-[#0a0a0a] border border-white/5 flex flex-col will-change-transform"
             >
               {/* Background Gradient/Image Placeholder - A dark modern gradient suited for a tech app */}
               <div className="absolute inset-0 bg-gradient-to-br from-orange-600/20 via-transparent to-blue-900/40 opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
@@ -298,19 +298,19 @@ const App = () => {
                 </div>
               </div>
 
-              {/* Abstract Visual Elements - Restored */}
-              <div className="absolute right-[-15%] bottom-[-20%] w-[70%] h-[90%] bg-gradient-to-t from-orange-600/30 to-purple-900/20 rounded-full blur-[100px] pointer-events-none"></div>
+              {/* Abstract Visual Elements - Optimized */}
+              <div className="absolute right-[-15%] bottom-[-20%] w-[70%] h-[90%] bg-gradient-to-t from-orange-600/30 to-purple-900/20 rounded-full blur-[60px] md:blur-[100px] pointer-events-none"></div>
             </motion.div>
 
             {/* PROJET 2: BADMINTON (SITE WEB) */}
             <motion.div
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: 50 }}
-              viewport={{ once: true }}
-              className="md:col-span-4 group interactive relative min-h-[500px] md:h-[650px] overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-[#7f1d1d] to-[#1a0505] text-white p-8 md:p-10 flex flex-col justify-between border border-white/10"
+              viewport={{ once: true, margin: "200px" }}
+              className="md:col-span-4 group interactive relative min-h-[500px] md:h-[650px] overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-[#7f1d1d] to-[#1a0505] text-white p-8 md:p-10 flex flex-col justify-between border border-white/10 will-change-transform"
             >
-              {/* Background Glow/Noise */}
-              <div className="absolute inset-0 opacity-20 pointer-events-none mix-blend-overlay">
+              {/* Background Glow/Noise - Disabled on mobile for perf */}
+              <div className="hidden md:block absolute inset-0 opacity-20 pointer-events-none mix-blend-overlay">
                 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                   <filter id="noiseFilter">
                     <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
