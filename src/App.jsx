@@ -256,8 +256,8 @@ const App = () => {
                 />
               </div>
 
-              <div className="relative p-8 md:p-16 h-full flex flex-col justify-between z-10">
-                <div className="flex justify-between items-start w-full gap-4">
+              <div className="relative p-8 md:p-16 h-full flex flex-col justify-start z-10">
+                <div className="flex flex-col md:flex-row justify-between items-start w-full gap-6 md:gap-4 mb-8 md:mb-12">
                   <div className="flex items-center gap-4">
                     <div className="w-16 h-16 rounded-2xl bg-orange-500/10 backdrop-blur-xl border border-orange-500/20 flex items-center justify-center overflow-hidden p-2">
                       <img src={granuloLogo} alt="Granulo Icon" className="w-full h-full object-contain" />
@@ -268,7 +268,7 @@ const App = () => {
                     </div>
                   </div>
 
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 self-start md:self-auto">
                     <button
                       onClick={() => setVideoModalOpen(true)}
                       className="px-4 py-2 rounded-full bg-white/5 border border-white/10 flex items-center justify-center gap-2 hover:bg-red-600 hover:border-red-600 transition-colors text-[10px] uppercase font-bold tracking-widest"
@@ -279,7 +279,7 @@ const App = () => {
                   </div>
                 </div>
 
-                <div className="max-w-xl">
+                <div className="max-w-xl mt-auto">
                   <h3 className="text-3xl md:text-5xl font-black uppercase italic tracking-tighter mb-6 leading-none">
                     Gérez votre poêle <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">intelligemment.</span>
                   </h3>
