@@ -131,6 +131,7 @@ const App = () => {
   // Progression de défilement fluide
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const [videoModalOpen, setVideoModalOpen] = useState(false);
 
   const [activeLegal, setActiveLegal] = useState(null); // 'mentions' or 'cgu' or null
 
@@ -268,12 +269,13 @@ const App = () => {
                   </div>
 
                   <div className="flex gap-2 self-end md:self-auto">
-                    <a href="https://youtu.be/zHUee01phNM" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-red-600 hover:border-red-600 transition-colors" title="Voir la démo vidéo">
-                      <Zap size={20} className="fill-current" />
-                    </a>
-                    <a href="https://granulo.app" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center group-hover:rotate-45 transition-transform duration-500">
-                      <ArrowUpRight size={20} />
-                    </a>
+                    <button
+                      onClick={() => setVideoModalOpen(true)}
+                      className="px-4 py-2 rounded-full bg-white/5 border border-white/10 flex items-center justify-center gap-2 hover:bg-red-600 hover:border-red-600 transition-colors text-[10px] uppercase font-bold tracking-widest"
+                      title="Voir la démo vidéo"
+                    >
+                      <Zap size={14} className="fill-current" /> Voir vidéo DEMO
+                    </button>
                   </div>
                 </div>
 
@@ -323,9 +325,6 @@ const App = () => {
                   <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center shadow-lg shadow-black/20 overflow-hidden p-2">
                     <img src={badmintonLogo} alt="Badminton Logo" className="w-full h-full object-contain" />
                   </div>
-                  <a href="https://badminton-longuyon.fr/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-red-600 transition-colors">
-                    <ArrowUpRight size={18} />
-                  </a>
                 </div>
 
                 <div className="flex flex-col leading-none mb-6">
@@ -351,7 +350,7 @@ const App = () => {
                     </div>
                   </div>
                   <a href="https://badminton-longuyon.fr/" target="_blank" rel="noreferrer" className="w-full py-4 mt-2 bg-white text-[#DC2626] rounded-2xl flex items-center justify-center font-black text-xs uppercase tracking-widest hover:scale-105 transition-transform shadow-xl">
-                    Découvrir le club
+                    Découvrir le site
                   </a>
                 </div>
               </div>
@@ -525,6 +524,37 @@ const App = () => {
                   </div>
                 </div>
               )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* --- VIDEO MODAL --- */}
+      <AnimatePresence>
+        {videoModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[200] bg-black/98 backdrop-blur-2xl p-6 md:p-20 flex items-center justify-center pointer-events-auto cursor-auto md:cursor-none"
+            onClick={() => setVideoModalOpen(false)}
+          >
+            <button
+              className="absolute top-6 right-6 md:top-10 md:right-10 text-white/50 hover:text-white interactive z-50 p-2"
+              onClick={() => setVideoModalOpen(false)}
+            >
+              <X size={40} />
+            </button>
+            <div className="w-full max-w-5xl aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-black">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/zHUee01phNM?autoplay=1&rel=0"
+                title="Granulo Demo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
           </motion.div>
         )}
