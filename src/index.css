@@ -1,21 +1,43 @@
 @import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
-  cursor: none;
-  /* Hide cursor globally */
+/* Cursor Logic: Only hide system cursor on devices with fine pointers (Mouse) */
+@media (pointer: fine) {
+  html,
+  body,
+  a,
+  button,
+  [type="button"],
+  input,
+  select,
+  textarea,
+  .interactive,
+  .cursor-smart {
+    cursor: none !important;
+  }
+  
+  .custom-cursor-element {
+    display: flex !important;
+  }
 }
 
-body,
-a,
-button,
-[type="button"],
-input,
-select,
-textarea,
-.interactive,
-.cursor-none {
-  cursor: none !important;
+/* On touch devices, force default cursor and hide custom one */
+@media (pointer: coarse) {
+  html,
+  body,
+  a,
+  button,
+  [type="button"],
+  input,
+  select,
+  textarea,
+  .interactive,
+  .cursor-smart {
+    cursor: auto !important;
+  }
+
+  .custom-cursor-element {
+    display: none !important;
+  }
 }
 
 body {

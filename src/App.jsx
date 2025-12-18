@@ -58,7 +58,7 @@ const Navbar = () => {
     <>
       <nav className={`fixed top-0 w-full z-[100] transition-all duration-700 ${scrolled ? 'py-4' : 'py-10'}`}>
         <div className="container mx-auto px-6 flex justify-between items-center text-[10px] font-black uppercase tracking-widest">
-          <div className="flex items-center gap-3 group pointer-events-auto cursor-auto md:cursor-none">
+          <div className="flex items-center gap-3 group pointer-events-auto cursor-smart">
             <div className="relative w-12 h-12 flex items-center justify-center">
               <img
                 src={logo}
@@ -102,7 +102,7 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-[150] bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center pointer-events-auto cursor-auto"
+            className="fixed inset-0 z-[150] bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center pointer-events-auto cursor-smart"
           >
             <button
               className="absolute top-10 right-6 text-white/50 hover:text-white transition-colors interactive"
@@ -136,7 +136,7 @@ const App = () => {
   const [activeLegal, setActiveLegal] = useState(null); // 'mentions' or 'cgu' or null
 
   return (
-    <div ref={targetRef} className="relative min-h-screen bg-[#050505] text-white selection:bg-blue-500 selection:text-white font-sans overflow-x-hidden cursor-auto md:cursor-none">
+    <div ref={targetRef} className="relative min-h-screen bg-[#050505] text-white selection:bg-blue-500 selection:text-white font-sans overflow-x-hidden cursor-smart">
 
       {/* --- BARRE DE PROGRESSION --- */}
       <motion.div className="fixed top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 z-[110] origin-left" style={{ scaleX }} />
@@ -153,7 +153,7 @@ const App = () => {
 
       {/* --- CURSEUR PERSONNALISÉ --- */}
       <motion.div
-        className="hidden md:flex fixed top-0 left-0 w-8 h-8 rounded-full border-2 border-white/20 z-[999] pointer-events-none mix-blend-difference items-center justify-center"
+        className="custom-cursor-element fixed top-0 left-0 w-8 h-8 rounded-full border-2 border-white/20 z-[999] pointer-events-none mix-blend-difference items-center justify-center hidden"
         style={{ x, y }}
         animate={{
           scale: isHovering ? 2.5 : 1,
@@ -257,7 +257,7 @@ const App = () => {
               </div>
 
               <div className="relative p-8 md:p-16 h-full flex flex-col justify-between z-10">
-                <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-0">
+                <div className="flex justify-between items-start w-full gap-4">
                   <div className="flex items-center gap-4">
                     <div className="w-16 h-16 rounded-2xl bg-orange-500/10 backdrop-blur-xl border border-orange-500/20 flex items-center justify-center overflow-hidden p-2">
                       <img src={granuloLogo} alt="Granulo Icon" className="w-full h-full object-contain" />
@@ -268,7 +268,7 @@ const App = () => {
                     </div>
                   </div>
 
-                  <div className="flex gap-2 self-end md:self-auto">
+                  <div className="flex gap-2">
                     <button
                       onClick={() => setVideoModalOpen(true)}
                       className="px-4 py-2 rounded-full bg-white/5 border border-white/10 flex items-center justify-center gap-2 hover:bg-red-600 hover:border-red-600 transition-colors text-[10px] uppercase font-bold tracking-widest"
@@ -477,7 +477,7 @@ const App = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[200] bg-black/98 backdrop-blur-2xl p-6 md:p-20 overflow-y-auto pointer-events-auto cursor-auto md:cursor-none"
+            className="fixed inset-0 z-[200] bg-black/98 backdrop-blur-2xl p-6 md:p-20 overflow-y-auto pointer-events-auto cursor-smart"
           >
             <button
               onClick={() => setActiveLegal(null)}
@@ -536,7 +536,7 @@ const App = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[200] bg-black/98 backdrop-blur-2xl p-6 md:p-20 flex items-center justify-center pointer-events-auto cursor-auto md:cursor-none"
+            className="fixed inset-0 z-[200] bg-black/98 backdrop-blur-2xl p-6 md:p-20 flex items-center justify-center pointer-events-auto cursor-smart"
             onClick={() => setVideoModalOpen(false)}
           >
             <button
