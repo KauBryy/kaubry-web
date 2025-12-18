@@ -387,68 +387,68 @@ const App = () => {
             viewport={{ once: true, margin: "100px" }}
             className="md:col-span-12 relative bg-gradient-to-br from-[#111] to-[#050505] rounded-[2.5rem] border border-white/5 p-8 md:p-16 overflow-hidden shadow-2xl"
           >
-             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative z-10">
-                
-                {/* Left Part: Text */}
-                <div className="md:col-span-7 flex flex-col gap-8">
-                   <div className="inline-flex self-start px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md">
-                      <span className="text-[10px] font-black uppercase tracking-widest text-white/80">Le Fondateur</span>
-                   </div>
-                   
-                   <div>
-                      <h2 className="text-4xl md:text-6xl font-black uppercase italic tracking-tighter text-white mb-2">Pierre Aubry.</h2>
-                      <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-                   </div>
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative z-10">
 
-                   <blockquote className="text-xl md:text-2xl font-medium text-white/90 italic border-l-4 border-blue-500 pl-6 py-2">
-                      "Mon parcours dans le support informatique m'a appris une chose : la technologie n'a de valeur que si elle résout un problème réel."
-                   </blockquote>
-
-                   <p className="text-white/50 leading-relaxed text-lg font-medium max-w-2xl">
-                      Architecte de solutions, je m'appuie sur une solide expérience en support IT pour concevoir des outils numériques robustes et performants. Mon objectif ? Transformer la complexité technique en simplicité opérationnelle, à l'image de l'application mobile Granulo.
-                   </p>
+              {/* Left Part: Text */}
+              <div className="md:col-span-7 flex flex-col gap-8">
+                <div className="inline-flex self-start px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md">
+                  <span className="text-[10px] font-black uppercase tracking-widest text-white/80">Le Fondateur</span>
                 </div>
 
-                {/* Right Part: Expertise Cards */}
-                <div className="md:col-span-5 flex flex-col gap-4">
-                   <div className="grid grid-cols-2 gap-4">
-                      <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-4 hover:bg-white/10 transition-colors group interactive">
-                         <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-500 group-hover:scale-110 transition-transform">
-                            <ShieldCheck size={20} />
-                         </div>
-                         <div>
-                            <h4 className="font-bold text-white uppercase tracking-wider text-sm">Fiabilité</h4>
-                            <span className="text-xs text-white/40 font-medium uppercase tracking-widest">Expert Support IT</span>
-                         </div>
-                      </div>
-                      
-                      <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-4 hover:bg-white/10 transition-colors group interactive">
-                         <div className="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-500 group-hover:scale-110 transition-transform">
-                            <Zap size={20} />
-                         </div>
-                         <div>
-                            <h4 className="font-bold text-white uppercase tracking-wider text-sm">Vision</h4>
-                            <span className="text-xs text-white/40 font-medium uppercase tracking-widest">Architecte Solutions</span>
-                         </div>
-                      </div>
-                   </div>
-
-                   <div className="bg-gradient-to-r from-orange-900/20 to-red-900/20 border border-orange-500/20 rounded-2xl p-6 flex items-center gap-6 hover:border-orange-500/40 transition-colors group interactive">
-                      <div className="w-12 h-12 rounded-full bg-orange-500/20 flex items-center justify-center text-orange-500 group-hover:rotate-12 transition-transform">
-                         <Flame size={24} />
-                      </div>
-                      <div className="flex flex-col">
-                         <h4 className="font-black text-white uppercase italic tracking-tight text-lg">Créateur de Granulo</h4>
-                         <span className="text-xs text-white/50 font-medium uppercase tracking-widest">Passionné de performance</span>
-                      </div>
-                   </div>
+                <div>
+                  <h2 className="text-4xl md:text-6xl font-black uppercase italic tracking-tighter text-white mb-2">Pierre Aubry.</h2>
+                  <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
                 </div>
 
-             </div>
-             
-             {/* Background Effects */}
-             <div className="absolute top-0 right-0 w-[50%] h-[100%] bg-gradient-to-l from-blue-900/10 to-transparent pointer-events-none"></div>
-             <div className="absolute bottom-0 left-0 w-[50%] h-[50%] bg-purple-900/10 blur-[100px] pointer-events-none"></div>
+                <blockquote className="text-xl md:text-2xl font-medium text-white/90 italic border-l-4 border-blue-500 pl-6 py-2">
+                  "Mon parcours dans le support informatique m'a appris une chose : la technologie n'a de valeur que si elle résout un problème réel."
+                </blockquote>
+
+                <p className="text-white/50 leading-relaxed text-lg font-medium max-w-2xl">
+                  Architecte de solutions, je m'appuie sur une solide expérience en support IT pour concevoir des outils numériques robustes et performants. Mon objectif ? Transformer la complexité technique en simplicité opérationnelle, à l'image de l'application mobile Granulo.
+                </p>
+              </div>
+
+              {/* Right Part: Expertise Cards */}
+              <div className="md:col-span-5 flex flex-col gap-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-4 hover:bg-white/10 transition-colors group interactive">
+                    <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-500 group-hover:scale-110 transition-transform">
+                      <ShieldCheck size={20} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white uppercase tracking-wider text-sm">Fiabilité</h4>
+                      <span className="text-[10px] text-white/40 font-medium uppercase tracking-wider">Expert Support IT</span>
+                    </div>
+                  </div>
+
+                  <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-4 hover:bg-white/10 transition-colors group interactive">
+                    <div className="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-500 group-hover:scale-110 transition-transform">
+                      <Zap size={20} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white uppercase tracking-wider text-sm">Vision</h4>
+                      <span className="text-[10px] text-white/40 font-medium uppercase tracking-wider">Architecte Solutions</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-orange-900/20 to-red-900/20 border border-orange-500/20 rounded-2xl p-6 flex items-center gap-6 hover:border-orange-500/40 transition-colors group interactive">
+                  <div className="w-12 h-12 rounded-full bg-orange-500/20 flex items-center justify-center text-orange-500 group-hover:rotate-12 transition-transform">
+                    <Flame size={24} />
+                  </div>
+                  <div className="flex flex-col">
+                    <h4 className="font-black text-white uppercase italic tracking-tight text-lg">Créateur de Granulo</h4>
+                    <span className="text-xs text-white/50 font-medium uppercase tracking-widest">Passionné de performance</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Background Effects */}
+            <div className="absolute top-0 right-0 w-[50%] h-[100%] bg-gradient-to-l from-blue-900/10 to-transparent pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-[50%] h-[50%] bg-purple-900/10 blur-[100px] pointer-events-none"></div>
           </motion.div>
         </div>
       </section>
