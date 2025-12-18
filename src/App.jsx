@@ -236,7 +236,7 @@ const App = () => {
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: 50 }}
               viewport={{ once: true }}
-              className="md:col-span-8 group interactive relative h-[500px] md:h-[650px] overflow-hidden rounded-[2.5rem] bg-[#0a0a0a] border border-white/5"
+              className="md:col-span-8 group interactive relative min-h-[550px] md:h-[650px] overflow-hidden rounded-[2.5rem] bg-[#0a0a0a] border border-white/5 flex flex-col"
             >
               {/* Background Gradient/Image Placeholder - A dark modern gradient suited for a tech app */}
               <div className="absolute inset-0 bg-gradient-to-br from-orange-600/20 via-transparent to-blue-900/40 opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
@@ -255,8 +255,8 @@ const App = () => {
                 />
               </div>
 
-              <div className="relative p-10 md:p-16 h-full flex flex-col justify-between z-10">
-                <div className="flex justify-between items-start">
+              <div className="relative p-8 md:p-16 h-full flex flex-col justify-between z-10">
+                <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-0">
                   <div className="flex items-center gap-4">
                     <div className="w-16 h-16 rounded-2xl bg-orange-500/10 backdrop-blur-xl border border-orange-500/20 flex items-center justify-center overflow-hidden p-2">
                       <img src={granuloLogo} alt="Granulo Icon" className="w-full h-full object-contain" />
@@ -267,7 +267,7 @@ const App = () => {
                     </div>
                   </div>
 
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 self-end md:self-auto">
                     <a href="https://youtu.be/zHUee01phNM" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-red-600 hover:border-red-600 transition-colors" title="Voir la démo vidéo">
                       <Zap size={20} className="fill-current" />
                     </a>
@@ -305,7 +305,7 @@ const App = () => {
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: 50 }}
               viewport={{ once: true }}
-              className="md:col-span-4 group interactive relative h-[500px] md:h-[650px] overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-[#7f1d1d] to-[#1a0505] text-white p-10 flex flex-col justify-between border border-white/10"
+              className="md:col-span-4 group interactive relative min-h-[500px] md:h-[650px] overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-[#7f1d1d] to-[#1a0505] text-white p-8 md:p-10 flex flex-col justify-between border border-white/10"
             >
               {/* Background Glow/Noise */}
               <div className="absolute inset-0 opacity-20 pointer-events-none mix-blend-overlay">
@@ -329,8 +329,8 @@ const App = () => {
                 </div>
 
                 <div className="flex flex-col leading-none mb-6">
-                  <h3 className="text-3xl md:text-4xl font-black uppercase italic tracking-tighter text-transparent [-webkit-text-stroke:1px_white] opacity-90 mb-1">AS Badminton</h3>
-                  <h3 className="text-4xl md:text-5xl font-black uppercase italic tracking-tighter text-white">Longuyon</h3>
+                  <h3 className="text-3xl md:text-4xl font-black uppercase italic tracking-tighter text-transparent [-webkit-text-stroke:1px_white] opacity-90 mb-1 break-words">AS Badminton</h3>
+                  <h3 className="text-4xl md:text-5xl font-black uppercase italic tracking-tighter text-white break-words">Longuyon</h3>
                 </div>
                 <span className="inline-block px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white text-[10px] font-black uppercase tracking-widest backdrop-blur-md">Site Vitrine</span>
               </div>
