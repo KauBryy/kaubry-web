@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+  cursor: none;
+  /* Hide cursor globally */
+}
+
+body,
+a,
+button,
+[type="button"],
+input,
+select,
+textarea,
+.interactive,
+.cursor-none {
+  cursor: none !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #050505;
+  /* Matching the app bg */
+  overflow-x: hidden;
+}
