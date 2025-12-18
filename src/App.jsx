@@ -384,7 +384,7 @@ const App = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             <div>
               <span className="text-blue-500 font-black uppercase tracking-[0.5em] text-[10px] mb-6 block">Solutions</span>
-              <h2 className="text-[8vw] md:text-7xl font-black uppercase italic tracking-tighter mb-10 text-white leading-none break-words">L'art de la <br /> transformation.</h2>
+              <h2 className="text-[8vw] md:text-7xl font-black uppercase italic tracking-tighter mb-10 text-white leading-none">L'art de la <br /> <span className="whitespace-nowrap">transformation.</span></h2>
               <p className="text-white/40 text-lg md:text-xl font-medium leading-relaxed max-w-md italic">
                 Chaque détail est pensé pour rassurer vos clients et automatiser vos processus.
               </p>
